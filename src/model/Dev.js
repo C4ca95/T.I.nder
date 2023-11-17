@@ -1,15 +1,16 @@
  const { Schema, model } = require("mongoose");
 
 const DevSchema = new Schema({
+    id:{
+        type:int
+    },
     name: {
         type: String,
         require: true,
     },
     cidade:{
         type:String,
-    },
-    repositorios:{
-        type:Number,
+        require:true
     },
     senha:{
         type: String,
@@ -17,6 +18,7 @@ const DevSchema = new Schema({
     },
     email:{
         type: String,
+        require:true
     },
     user: {
         type: String,
