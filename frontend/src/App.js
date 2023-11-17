@@ -12,6 +12,7 @@ import ChatScreen from './components/Chats/ChatScreen/index';
 import Signup from './pages/Signup';
 import Signin from './pages/Signin';
 import SignupCompany from './pages/SignupCompany';
+import EditProfile from './pages/EditProfile';
 
 function App() {
   return (
@@ -34,13 +35,23 @@ function App() {
           <Route path="/chat/:person">
             <Header backButton="/chat" />
             <ChatScreen />
-          </Route>  
+          </Route> 
+
+          <Route path="/EditProfile/:person">
+            <Header backButton="/EditProfile" />
+            <EditProfile />
+          </Route> 
           
           {/* Chats screen */}
           <Route path="/chat">
             <Header backButton="/" />
             <Chats />
           </Route>
+
+          <Route path="/EditProfile">
+            <Header backButton="/" />
+            <EditProfile />
+          </Route> 
 
           {/* Tinder Cards */}
           <Route path="/">

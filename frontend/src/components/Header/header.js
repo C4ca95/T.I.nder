@@ -21,9 +21,11 @@ function Header({ backButton }) {
         </HeaderIcon>
       ) : (
         <HeaderIcon>
+          <Link to="/EditProfile">
           <IconButton>
             <PersonIcon className="header__icon" fontSize="large" />
           </IconButton>
+          </Link>
         </HeaderIcon>
       )}
 
